@@ -1,0 +1,30 @@
+seed: 1024
+gpu-id: 3
+wandb: False
+test-only: True
+
+#logging:
+print-every: 30
+test-every: 5000
+
+#dataset:
+dataset-path: '/media/Dataset/Flickr/Flick_patch'
+eval-dataset-path: '/media/Dataset/kodak'
+num-workers: 8
+training-img-size: (256, 256)
+
+#channel:
+channel-type: 'awgn'
+SNR: 10
+
+#optimizer:
+train-lambda: 0.72
+clip-max-norm: 1.0
+
+#trainer
+#pretrained-ntc: 'path to ntc checkpoint'
+pretrained: '/media/D/wangsixian/NTSCC_BA/checkpoints/NTSCC/checkerboard2/0.18v2/checkpoint_best_loss.pth.tar'
+
+#network:
+net: 'checkboard2'
+eta: 0.2
