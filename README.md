@@ -10,9 +10,11 @@ paper "[Improved Nonlinear Transform Source-Channel Coding to Catalyze Semantic 
 
 <img src="figs/Fig_system_architecture_overall.png"  style="zoom: 33%;" />
 
-## Evaluation on [Kodak](http://r0k.us/graphics/kodak/) Dataset and [CLIC 2021 testset](http://clic.compression.cc/2021/)
+## Evaluation on [Kodak](http://r0k.us/graphics/kodak/) Dataset
 
 <img src="figs/Fig_rd_a-eps-converted-to.png"  style="zoom: 33%;" />
+
+## Evaluation on [CLIC 2021 testset](http://clic.compression.cc/2021/)
 <img src="figs/Fig_rd_c-eps-converted-to.png"  style="zoom: 33%;" />
 
 ## Requirements
