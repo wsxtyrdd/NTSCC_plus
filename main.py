@@ -365,10 +365,10 @@ def main(argv):
     criterion = RateDistortionLoss(lmbda=config.train_lambda)
 
     if config.test_only:
-        if config.checkpoint is not None:
-            load_weights(net, config.checkpoint)
-        else:
+        if config.pretrained is not None:
             load_weights(net, config.pretrained)
+        else:
+            raise ValueError("Please specify the checkpoint path for testing.")
         test_loader = get_test_loader(config.eval_dataset_path)
         test(net, criterion, test_loader, device, logger)
 
