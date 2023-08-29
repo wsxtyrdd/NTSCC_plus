@@ -33,37 +33,17 @@ or [Baidu Netdisk](https://pan.baidu.com/s/19yVfIq-IccBgYHH2ImUM1A) (提取码: 
 
 Note: We reorganize code and the performances are slightly different from the paper's.
 
-## Train & Evaluate & Comress & Decompress
-
-**Train:**
-
-```bash
-sh scripts/pretrain.sh 0.3
-sh scripts/train.sh [tradeoff_lambda(e.g. 0.02)]
-(You may use your own dataset by modifying the train/test data path.)
-```
+## Evaluate
 
 **Evaluate:**
 
 ```bash
 # Kodak
-sh scripts/test.sh [/path/to/kodak] [model_path]
-(sh test_parallel.sh [/path/to/kodak] [model_path])
+python main.py --gpu-id 0 --test-only --eval-dataset-path /path/to/kodak --eval-dataset-name kodak --pretrained /path/to/checkpoint
 ```
 
-**Compress:**
-
-```bash
-sh scripts/compress.sh [original.png] [model_path]
-(sh compress_parallel.sh [original.png] [model_path])
-```
-
-**Decompress:**
-
-```bash
-sh scripts/decompress.sh [original.bin] [model_path]
-(sh decompress_parallel.sh [original.bin] [model_path])
-```
+## TODO:
+Release the code and weights for online reference (NTSCC++) and compatible NTSCC++. 
 
 ## Acknowledgement
 

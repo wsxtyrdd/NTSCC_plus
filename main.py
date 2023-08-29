@@ -179,8 +179,10 @@ def test(net, criterion, test_loader, device, logger):
                 # revert to PNG format
                 bits_num = os.path.getsize('output.png') * 8
 
-            # for AWGN channel at SNR=10dB, we use 3/4LDPC+16QAM
+            #  2/3 rate LDPC + 16QAM for AWGN SNR=10dB
             cbr_k = bits_num / 8 / (new_h * new_w)
+            # or ideal capacity-achieving channel code
+            # cbr_k = bits_num / np.log2(1 + 10 ** (net.channel.chan_param / 10)) / (new_h * new_w * 3)
 
             results["x_hat"] = F.pad(
                 results["x_hat"], (-padding_left, -padding_right, -padding_top, -padding_bottom)
