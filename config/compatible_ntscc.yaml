@@ -1,0 +1,40 @@
+seed: 42
+gpu-id: 0
+wandb: False
+phase: 'test'
+
+#logging:
+exp_name: 'compatible_ntscc'
+print-every: 30
+test-every: 5000
+test_only: True
+
+#dataset:
+dataset-path: '/media/Dataset/Flickr/Flick_patch'
+eval_dataset: 'kodak'
+base_path: '/media/Dataset'
+num-workers: 8
+training-img-size: (256, 256)
+
+#channel:
+channel-type: 'awgn'
+SNR: 10
+
+#optimizer:
+clip-max-norm: 1.0
+
+#trainer
+#pretrained-ntc: 'path to ntc checkpoint'
+pretrained: './checkpoint/compatible_NTSCC.pth.tar'
+
+#network:
+net: 'compatible_ntscc'
+eta: 0.2
+train_lambdas: [ 0.015, 0.045, 0.09, 0.18, 0.36, 0.72 ]
+train_SNRs: [ 0, 2, 4, 6, 8, 10, 12, 14 ]
+rate_num: 6
+SNR_num: 8
+eta_min: 0.15
+eta_max: 0.3
+multiple_rate: [1, 4, 8, 12, 16, 20, 24, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224,
+                                 240, 256, 272, 288, 304, 320]
