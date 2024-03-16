@@ -45,7 +45,7 @@ python main.py --gpu-id 0 --test-only --eval-dataset-path /path/to/kodak --eval-
 ```
 
 ## TODO:
-Release the code and weights for online reference (NTSCC++)
+Release the code for online inference (NTSCC++)
 
 ## Acknowledgement
 
