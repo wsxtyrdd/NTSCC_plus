@@ -30,8 +30,8 @@ and [timm](https://huggingface.co/docs/timm/installation).
 ## Trained Models
 
 Download the pre-trained models
-from [Google Drive](https://drive.google.com/drive/folders/1t3A_sBHCaf24L8pJZehdtmAHjEEGvPq1?usp=sharing)
-or [Baidu Netdisk](https://pan.baidu.com/s/19yVfIq-IccBgYHH2ImUM1A) (提取码: deye).
+from [Google Drive](https://drive.google.com/drive/folders/1t3A_sBHCaf24L8pJZehdtmAHjEEGvPq1?usp=sharing).
+
 
 Note: We reorganize code and the performances are slightly different from the paper's.
 
@@ -45,7 +45,7 @@ python main.py --gpu-id 0 --test-only --eval-dataset-path /path/to/kodak --eval-
 ```
 
 ## TODO:
-Release the code and weights for online reference (NTSCC++) and compatible NTSCC+. 
+Release the code and weights for online reference (NTSCC++)
 
 ## Acknowledgement
 
