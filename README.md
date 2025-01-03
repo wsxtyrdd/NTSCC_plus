@@ -21,6 +21,14 @@ paper "[Improved Nonlinear Transform Source-Channel Coding to Catalyze Semantic 
 
 Clone the repo and create a conda environment (we use PyTorch 1.9, CUDA 11.1).
 
+！！！ATTENTION: 
+
+The provided checkpoints were trained and evaluated using NATTEN v0.14.6. We find that using newer versions of NATTEN may result in incorrect results. 
+To ensure compatibility, install the specific version with the following command:
+```bash
+pip3 install natten==0.14.6+torch190cu111 -f https://shi-labs.com/natten/wheels
+```
+
 The dependencies
 includes [CompressAI](https://github.com/InterDigitalInc/CompressAI), [Natten](https://www.shi-labs.com/natten/),
 and [timm](https://huggingface.co/docs/timm/installation).
@@ -31,9 +39,6 @@ and [timm](https://huggingface.co/docs/timm/installation).
 
 Download the pre-trained models
 from [Google Drive](https://drive.google.com/drive/folders/1t3A_sBHCaf24L8pJZehdtmAHjEEGvPq1?usp=sharing).
-
-
-Note: We reorganize code and the performances are slightly different from the paper's.
 
 ## Evaluate
 
